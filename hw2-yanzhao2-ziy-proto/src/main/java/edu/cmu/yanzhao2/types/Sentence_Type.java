@@ -15,19 +15,18 @@ import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
  * Updated by JCasGen Wed Oct 08 13:11:36 PDT 2014
- * @generated */
+ *  */
 public class Sentence_Type extends Annotation_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
   			 if (Sentence_Type.this.useExistingInstance) {
-  			   // Return eq fs instance if already created
   		     FeatureStructure fs = Sentence_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
   		       fs = new Sentence(addr, Sentence_Type.this);
@@ -38,19 +37,17 @@ public class Sentence_Type extends Annotation_Type {
         } else return new Sentence(addr, Sentence_Type.this);
   	  }
     };
-  /** @generated */
-  @SuppressWarnings ("hiding")
+  /**  */
   public final static int typeIndexID = Sentence.typeIndexID;
-  /** @generated 
+  /**  
      @modifiable */
-  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.yanzhao2.types.Sentence");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_id;
-  /** @generated */
+  /**  */
   final int     casFeatCode_id;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -59,7 +56,7 @@ public class Sentence_Type extends Annotation_Type {
       jcas.throwFeatMissing("id", "edu.cmu.yanzhao2.types.Sentence");
     return ll_cas.ll_getStringValue(addr, casFeatCode_id);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -70,11 +67,11 @@ public class Sentence_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_content;
-  /** @generated */
+  /**  */
   final int     casFeatCode_content;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -83,7 +80,7 @@ public class Sentence_Type extends Annotation_Type {
       jcas.throwFeatMissing("content", "edu.cmu.yanzhao2.types.Sentence");
     return ll_cas.ll_getStringValue(addr, casFeatCode_content);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -97,7 +94,7 @@ public class Sentence_Type extends Annotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

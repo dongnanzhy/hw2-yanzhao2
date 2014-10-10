@@ -1,7 +1,6 @@
 package edu.cmu.yanzhao2.annotator;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -10,7 +9,6 @@ import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceAccessException;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import com.aliasi.chunk.Chunk;
@@ -30,11 +28,6 @@ public class Lingpipe extends JCasAnnotator_ImplBase {
    * the maximum length of gene words according to sample.out
    */
   private static final int MAX = 8;
-
-  /**
-   * the name of NER gene model
-   */
-  private File modelFile = null;
 
   /**
    * the handler to load the model and recognize gene words
