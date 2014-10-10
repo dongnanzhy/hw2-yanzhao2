@@ -45,8 +45,9 @@ public class Merge extends JCasAnnotator_ImplBase {
         FSIterator<Annotation> Lingpipe_it = aJCas.getAnnotationIndex(GeneLingpipe.type).iterator();
         while (Lingpipe_it.hasNext()) {
               GeneLingpipe Lingpipe = (GeneLingpipe) Lingpipe_it.next();
-              if (abner_map_h.containsKey(Lingpipe.getContent())
-                     || (Lingpipe.getConfidence()>=0.7 && abner_map_l.containsKey(Lingpipe.getContent())) ){
+              if (Lingpipe.getConfidence() >= 0.85 
+                      || (Lingpipe.getConfidence()<0.85 && Lingpipe.getConfidence()>0.6 && abner_map_l.containsKey(Lingpipe.getContent()))
+                      || (Lingpipe.getConfidence()<=0.6 && abner_map_h.containsKey(Lingpipe.getContent())) ){
 //                  abner_map.remove(Lingpipe.getContent());
                   Result result = new Result(aJCas);
                   result.setContent(Lingpipe.getContent());
